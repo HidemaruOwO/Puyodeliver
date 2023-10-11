@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  rawserver:
+    build:
+      context: .
+      network: host
+    volumes:
+      - ./public:/public
+    ports:
+      - 3000:3000
+    environment:
+      - PUBLIC_FOLDER=/public
+    restart: always
