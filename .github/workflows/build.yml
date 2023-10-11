@@ -1,4 +1,4 @@
-name: "Build"
+name: "Artifact"
 on:
   push:
 
@@ -9,8 +9,8 @@ permissions:
   statuses: read
 
 jobs:
-  release:
-    name: Release
+  build:
+    name: Artifact
     # runs-on: ubuntu-latest
 
     # Multi platform support
