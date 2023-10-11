@@ -1,16 +1,16 @@
 <div align="center">
 
-# 很棒的存储库🎨
+# Puyo送货📦
 
-<!-- s;HidemaruOwO/Awesome-Repository;User/Repository;g -->
+<!-- s;HidemaruOwO/Puyodeliver;User/Repository;g -->
 
-[![Test CLI](https://github.com/HidemaruOwO/Awesome-Repository/actions/workflows/test.yml/badge.svg)](https://github.com/HidemaruOwO/Awesome-Repository/actions/workflows/test.yml)![最終コミット](https://img.shields.io/github/last-commit/HidemaruOwO/Awesome-Repository?style=flat-square)![リポジトリのスター](https://img.shields.io/github/stars/HidemaruOwO/Awesome-Repository?style=flat-square)![問題](https://img.shields.io/github/issues/HidemaruOwO/Awesome-Repository?style=flat-square)![オープンな問題](https://img.shields.io/github/issues-raw/HidemaruOwO/Awesome-Repository?style=flat-square)![バグの問題](https://img.shields.io/github/issues/HidemaruOwO/Awesome-Repository/bug?style=flat-square)
+[![Test CLI](https://github.com/HidemaruOwO/Puyodeliver/actions/workflows/test.yml/badge.svg)](https://github.com/HidemaruOwO/Puyodeliver/actions/workflows/test.yml)![最終コミット](https://img.shields.io/github/last-commit/HidemaruOwO/Puyodeliver?style=flat-square)![リポジトリのスター](https://img.shields.io/github/stars/HidemaruOwO/Puyodeliver?style=flat-square)![問題](https://img.shields.io/github/issues/HidemaruOwO/Puyodeliver?style=flat-square)![オープンな問題](https://img.shields.io/github/issues-raw/HidemaruOwO/Puyodeliver?style=flat-square)![バグの問題](https://img.shields.io/github/issues/HidemaruOwO/Puyodeliver/bug?style=flat-square)
 
-![image](https://github.com/HidemaruOwO/Awesome-Repository/assets/82384920/bf4ccddf-3eae-4fae-97f4-d2b59bec919f)
+<!-- ![image](https://github.com/HidemaruOwO/Puyodeliver/assets/82384920/bf4ccddf-3eae-4fae-97f4-d2b59bec919f) -->
 
 ## 这是什么？
 
-更多精彩的存储库模板。
+一个可爱又可爱的网络文件浏览器。
 
 </div>
 
@@ -30,32 +30,34 @@
 
 ## 用法💨
 
-请运行这个脚本。
+GitHub[发布](https://github.com/HidemaruOwO/Puyodeliver/releases)或行动[人工制品](https://github.com/HidemaruOwO/Puyodeliver/actions/workflows/build.yml)请从中下载可执行文件并运行它。
 
 ```bash
-./run.sh
+mkdir public
+PUBLIC_FOLDER=public/ ./puyodeliver
 ```
 
-## 安装😊
+<!-- ## Install 😊 -->
 
-请运行这个脚本。
+<!-- このスクリプトを実行してください。 -->
 
-```bash
-./install.sh
-```
+<!-- ```bash -->
+
+<!-- ./install.sh -->
+
+<!-- ``` -->
 
 ## 构建🔨
 
 ```bash
-git clone https://github.com/HidemaruOwO/Awesome-Repository.git
-cd Awesome-Repository.git
-mkdir build && cd build
-go build ../build.sh
+git clone https://github.com/HidemaruOwO/Puyodeliver.git
+cd Puyodeliver
+go build src/main.go
 ```
 
 ## 依赖关系🪡
 
-要使用此应用程序，请在您的路径中注册以下命令。
+このアプリを使用するには、以下のコマンドをパスに登録してください。
 
 -   `git`
 

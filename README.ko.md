@@ -1,16 +1,17 @@
 <div align="center">
 
-# 멋진 저장소 🎨
+# 뿌요딜리버 📦
 
-<!-- s;HidemaruOwO/Awesome-Repository;User/Repository;g -->
+<!-- s;HidemaruOwO/Puyodeliver;User/Repository;g -->
 
-[![Test CLI](https://github.com/HidemaruOwO/Awesome-Repository/actions/workflows/test.yml/badge.svg)](https://github.com/HidemaruOwO/Awesome-Repository/actions/workflows/test.yml)![最終コミット](https://img.shields.io/github/last-commit/HidemaruOwO/Awesome-Repository?style=flat-square)![リポジトリのスター](https://img.shields.io/github/stars/HidemaruOwO/Awesome-Repository?style=flat-square)![問題](https://img.shields.io/github/issues/HidemaruOwO/Awesome-Repository?style=flat-square)![オープンな問題](https://img.shields.io/github/issues-raw/HidemaruOwO/Awesome-Repository?style=flat-square)![バグの問題](https://img.shields.io/github/issues/HidemaruOwO/Awesome-Repository/bug?style=flat-square)
+[![Test CLI](https://github.com/HidemaruOwO/Puyodeliver/actions/workflows/test.yml/badge.svg)](https://github.com/HidemaruOwO/Puyodeliver/actions/workflows/test.yml)![最終コミット](https://img.shields.io/github/last-commit/HidemaruOwO/Puyodeliver?style=flat-square)![リポジトリのスター](https://img.shields.io/github/stars/HidemaruOwO/Puyodeliver?style=flat-square)![問題](https://img.shields.io/github/issues/HidemaruOwO/Puyodeliver?style=flat-square)
+![オープンな問題](https://img.shields.io/github/issues-raw/HidemaruOwO/Puyodeliver?style=flat-square)![バグの問題](https://img.shields.io/github/issues/HidemaruOwO/Puyodeliver/bug?style=flat-square)
 
-![image](https://github.com/HidemaruOwO/Awesome-Repository/assets/82384920/bf4ccddf-3eae-4fae-97f4-d2b59bec919f)
+<!-- ![image](https://github.com/HidemaruOwO/Puyodeliver/assets/82384920/bf4ccddf-3eae-4fae-97f4-d2b59bec919f) -->
 
 ## 이게 뭐야?
 
-더 멋진 저장소 템플릿입니다.
+웹상의 푸요트한 귀여운 파일 브라우저입니다.
 
 </div>
 
@@ -30,27 +31,29 @@
 
 ## 사용법 💨
 
-이 스크립트를 실행하십시오.
+GitHub의[풀어 주다](https://github.com/HidemaruOwO/Puyodeliver/releases)또는 Actions[인공물](https://github.com/HidemaruOwO/Puyodeliver/actions/workflows/build.yml)에서 실행 파일을 다운로드하여 실행하십시오.
 
 ```bash
-./run.sh
+mkdir public
+PUBLIC_FOLDER=public/ ./puyodeliver
 ```
 
-## 설치 😊
+<!-- ## Install 😊 -->
 
-이 스크립트를 실행하십시오.
+<!-- このスクリプトを実行してください。 -->
 
-```bash
-./install.sh
-```
+<!-- ```bash -->
+
+<!-- ./install.sh -->
+
+<!-- ``` -->
 
 ## 빌드🔨
 
 ```bash
-git clone https://github.com/HidemaruOwO/Awesome-Repository.git
-cd Awesome-Repository.git
-mkdir build && cd build
-go build ../build.sh
+git clone https://github.com/HidemaruOwO/Puyodeliver.git
+cd Puyodeliver
+go build src/main.go
 ```
 
 ## 종속성 🪡
