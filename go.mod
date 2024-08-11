@@ -1,4 +1,4 @@
-module github.com/HidemaruOwO/Puyodeliver
+module github.com/HidemaruOwO/puyodeliver
 
 go 1.21.2
 
