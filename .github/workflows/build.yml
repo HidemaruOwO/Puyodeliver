@@ -56,11 +56,16 @@ jobs:
         run: go build -ldflags="-s -w" -trimpath src/main.go
 
       - name: Rename files
-        run: mv main puyodeliver
+        run: |
+          if [ -f main.exe ]; then
+            mv main.exe puyodeliver.exe
+          elif [ -f main ]; then
+            mv main puyodeliver
+          fi
         shell: bash
 
       - name: Artifact
         uses: actions/upload-artifact@v3
         with:
           name: Artifact-${{ matrix.target }}
-          path: puyodeliver
+          path: puyodeliver*
