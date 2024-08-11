@@ -25,6 +25,8 @@ jobs:
       - name: Build Docker Image
         run: |
           cd docker
+          pwd
+          ls
           docker build --tag ghcr.io/$GITHUB_ACTOR/puyodeliver:latest \
           --tag ghcr.io/$GITHUB_ACTOR/puyodeliver:$(echo $GITHUB_SHA | head -c7) \
           .
