@@ -57,6 +57,7 @@ jobs:
 
       - name: Rename files
         run: mv main puyodeliver
+        shell: bash
 
       - name: Artifact
         uses: actions/upload-artifact@v3
