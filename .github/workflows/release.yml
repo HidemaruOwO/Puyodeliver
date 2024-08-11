@@ -6,6 +6,9 @@ on:
       - published
 
 permissions:
+  packages: write
+  attestations: write
+  id-token: write
   contents: write
   repository-projects: write
   actions: write
@@ -15,26 +18,25 @@ jobs:
   publish_docker_image:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build Docker Image
-        run: |
-          cd docker
-          pwd
-          ls
-          docker build --tag ghcr.io/$GITHUB_ACTOR/puyodeliver:latest \
-          --tag ghcr.io/$GITHUB_ACTOR/puyodeliver:$(echo $GITHUB_SHA | head -c7) \
-          .
-      - name: Push Docker Image
-        run: |
-          cd docker
-          docker push ghcr.io/$GITHUB_ACTOR/puyodeliver:latest
-          docker push ghcr.io/$GITHUB_ACTOR/puyodeliver:$(echo $GITHUB_SHA | head -c7)
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: HidemaruOwO/puyodeliver
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: master
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
 
   release:
     name: Release
