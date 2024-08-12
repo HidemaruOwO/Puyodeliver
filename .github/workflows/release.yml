@@ -39,6 +39,8 @@ jobs:
           push: true
           tags: ${{ github.repository }}:latest
           labels: ${{ steps.meta.outputs.labels }}
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
 
   release:
     name: Release
