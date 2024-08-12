@@ -16,6 +16,8 @@ permissions:
 
 jobs:
   publish_docker_image:
+    env:
+      GHCR_REPO: ghcr.io/${{ github.repository }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,13 +33,13 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ github.repository }}
+          images: ${{ GHCR_REPO }}
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: docker
           push: true
-          tags: latest
+          tags: ${{ GHCR_REPO }}:latest
           labels: ${{ steps.meta.outputs.labels }}
 
   release:
