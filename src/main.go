@@ -1,4 +1,4 @@
-package main
+package src
 
 import (
 	"fmt"
@@ -116,7 +116,7 @@ func readDirectory(folder string) ([]os.FileInfo, error) {
 	return files, nil
 }
 
-func main() {
+func Entry() {
 	e := echo.New()
 
 	port := os.Getenv("PORT")
