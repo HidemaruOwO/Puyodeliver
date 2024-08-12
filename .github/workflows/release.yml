@@ -33,13 +33,13 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${ GHCR_REPO }
+          images: $GHCR_REPO
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: docker
           push: true
-          tags: ${ GHCR_REPO }:latest
+          tags: $GHCR_REPO:latest
           labels: ${{ steps.meta.outputs.labels }}
 
   release:
