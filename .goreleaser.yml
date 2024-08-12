@@ -15,7 +15,7 @@ checksum:
   name_template: "checksums.txt"
 
 builds:
-  - id: "pummit"
+  - id: "puyodeliver"
     main: .
     env:
       - CGO_ENABLED=0
