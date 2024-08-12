@@ -34,12 +34,15 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTORY }}/${{ github.repository }}
+      - name: Lowercase github.repository
+        run: |
+          echo "IMAGE_NAME=`echo ${{github.repository}} | tr '[:upper:]' '[:lower:]'`" >>${GITHUB_ENV}
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: docker
           push: true
-          tags: ${{ env.REGISTORY }}/${{ lowercase(github.repository) }}:latest
+          tags: ${{ env.REGISTORY }}/${{ env.IMAGE_NAME }}:latest
           labels: ${{ steps.meta.outputs.labels }}
 
   release:
