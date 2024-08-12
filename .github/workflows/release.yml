@@ -29,13 +29,13 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: HidemaruOwO/puyodeliver
+          images: ${{ github.action_repository }}
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: docker
           push: true
-          tags: hidemaruowo/puyodeliver:latest
+          tags: ${{ github.action_repository }}:latest
           labels: ${{ steps.meta.outputs.labels }}
 
   release:
